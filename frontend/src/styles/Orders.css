@@ -1,0 +1,490 @@
+/* ==========================================================================
+   ORDERS PAGE STYLES — SmallThings Modern
+   ========================================================================== */
+
+.orders-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+.orders-header {
+  margin-bottom: 24px;
+}
+
+.orders-header h1 {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+
+.orders-header p {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+.orders-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-xs);
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.active-tab {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+.tab-badge {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.12);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.active-tab .tab-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   ORDERS GRID
+   ========================================================================== */
+
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================================================
+   ORDER CARD
+   ========================================================================== */
+
+.order-card {
+  display: flex;
+  gap: 24px;
+  padding: 22px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  border-color: var(--border-focus);
+  box-shadow: var(--shadow-md);
+}
+
+.order-image {
+  width: 140px;
+  height: 140px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--bg-elevated);
+  flex-shrink: 0;
+  border: 1px solid var(--border-color);
+}
+
+.order-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.order-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.order-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.order-details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.detail-icon {
+  margin-right: 8px;
+  color: var(--text-muted);
+}
+
+.order-buyer-note {
+  background: var(--bg-elevated);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-primary);
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.cancel-request-btn {
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: var(--bg-elevated);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.15s ease;
+}
+
+.cancel-request-btn:hover {
+  background: var(--danger-bg);
+}
+
+/* ==========================================================================
+   STATUS BADGES
+   ========================================================================== */
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status.requested {
+  background: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.status.reserved {
+  background: var(--info-bg);
+  color: var(--info-text);
+}
+
+.status.completed {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status.rejected {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+.status.cancelled {
+  background: var(--bg-elevated);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   GROUPED SELLER CARD
+   ========================================================================== */
+
+.grouped-card {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+}
+
+.group-header {
+  display: flex;
+  gap: 20px;
+  padding: 22px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.group-info {
+  flex: 1;
+}
+
+.group-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.group-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.request-count {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent-light);
+  color: var(--accent-text);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   BUYER LIST
+   ========================================================================== */
+
+.buyer-list {
+  padding: 18px 24px 22px;
+}
+
+.buyer-list-title {
+  margin: 0 0 14px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.buyer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.buyer-row:last-child {
+  border-bottom: none;
+}
+
+.buyer-info h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.buyer-message-text {
+  margin: 4px 0 6px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.buyer-timestamp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.buyer-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.buyer-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.accept-btn {
+  background: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+
+.accept-btn:hover {
+  background: var(--accent-hover);
+}
+
+.reject-btn {
+  background: var(--bg-elevated);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.reject-btn:hover {
+  background: var(--danger-bg);
+}
+
+/* ==========================================================================
+   RESERVED SECTION
+   ========================================================================== */
+
+.reserved-section {
+  padding: 20px 24px;
+  background: var(--bg-elevated);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reserved-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--info-text);
+  font-size: 0.95rem;
+}
+
+.buyer-note-box {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.complete-btn {
+  align-self: flex-start;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  transition: all 0.2s ease;
+}
+
+.complete-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   EMPTY & LOADING STATES
+   ========================================================================== */
+
+.orders-empty,
+.orders-loading {
+  padding: 80px 24px;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.orders-empty h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.orders-empty p {
+  color: var(--text-muted);
+  max-width: 480px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.explore-btn {
+  margin-top: 18px;
+  padding: 10px 22px;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+  transition: all 0.2s ease;
+}
+
+.explore-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+  }
+
+  .order-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .group-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buyer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buyer-actions {
+    width: 100%;
+  }
+
+  .buyer-actions button {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .orders-tabs {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   SmallThings Dark Mode & Design Token Compatibility Bridge
+   Tokens are now centrally managed in index.css via CSS variables.
+   ========================================================================== */
+
+/* Compatibility helper classes if needed */
+.theme-dark {
+  color-scheme: dark;
+}
+
+.theme-light {
+  color-scheme: light;
+}
