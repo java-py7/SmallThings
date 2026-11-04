@@ -13,7 +13,7 @@ import {
     TrendingUp,
 } from "lucide-react";
 import Layout from "../components/Layout";
-import api from "../services/api";
+import api, { SERVER_BASE_URL } from "../services/api";
 import "../styles/Overview.css";
 
 function Overview() {
@@ -33,7 +33,7 @@ function Overview() {
         if (image.startsWith("data:image") || image.startsWith("http")) {
             return image;
         }
-        return `http://localhost:5000/${image.replace(/^\//, "")}`;
+        return `${SERVER_BASE_URL}/${image.replace(/^\//, "")}`;
     };
 
     const fetchOverview = useCallback(async () => {

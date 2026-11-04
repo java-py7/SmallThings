@@ -1,7 +1,27 @@
 import axios from "axios";
 
-export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// Normalize and configure API base URL
+// Supports VITE_API_URL with or without trailing slash or /api suffix
+const rawApiUrl = import.meta.env.VITE_API_URL;
+
+export const resolveApiUrl = (url) => {
+  if (!url || typeof url !== "string") {
+    return "http://localhost:5000/api";
+  }
+  const clean = url.trim().replace(/\/+$/, "");
+  return clean.endsWith("/api") ? clean : `${clean}/api`;
+};
+
+export const resolveServerUrl = (url) => {
+  if (!url || typeof url !== "string") {
+    return "http://localhost:5000";
+  }
+  const clean = url.trim().replace(/\/+$/, "");
+  return clean.endsWith("/api") ? clean.slice(0, -4) : clean;
+};
+
+export const API_BASE_URL = resolveApiUrl(rawApiUrl);
+export const SERVER_BASE_URL = resolveServerUrl(rawApiUrl);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
